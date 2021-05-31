@@ -170,20 +170,61 @@ var express=require('express');
 fs.readFile(fileName [,options], callback)
 ```
 檔案系統操作
-| Method方法|Description描述|
-| -------- | -------- |
-|**fs.readFile(fileName [,options], callback)**|**讀取現有文件**| 
-|fs.writeFile(filename, data[, options], callback)| 寫入文件，果存在則覆蓋，否則建立一個新的文件。|
-|**fs.open(path, flags[, mode], callback)**|**打開文件進行閱讀或寫**入。|
-|fs.rename(oldPath, newPath, callback)| 重命名現有文件|
-|fs.stat(path, callback)| 返回包含重要文件統計信息的fs.stat 物件。|
-|fs.rmdir(path, callback)| 重命名現有目錄。|
-|fs.mkdir(path[, mode], callback)| 創建新目錄。|
-|fs.readdir(path, callback)| 讀取指定目錄的內容。|
-|fs.utimes(path, atime, mtime, callback)| 更改文件的時間標記。|
-|fs.exists(path, callback)| 確定指定的文件是否存在。|
-|fs.access(path[, mode], callback)| 測試指定文件的用戶權限。|
-|fs.appendFile(file, data[, options], callback)| 將新內容附加到現有文件。|
+<table>
+  <tr>
+    <td> Method方法</td>
+    <td>Description描述</td>
+  </tr>
+  <tr>
+    <td>**fs.readFile(fileName [,options], callback)**</td>
+    <td>**讀取現有文件**</td>
+  </tr>
+  <tr>
+    <td>fs.writeFile(filename, data[, options], callback)</td>
+    <td>寫入文件，果存在則覆蓋，否則建立一個新的文件。</td>
+  </tr>
+  <tr>
+    <td>**fs.open(path, flags[, mode], callback)**</td>
+    <td>**打開文件進行閱讀或寫入。**</td>
+  </tr>
+  <tr>
+    <td>fs.rename(oldPath, newPath, callback)</td>
+    <td>重命名現有文件</td>
+  </tr>
+  <tr>
+    <td>fs.stat(path, callback)</td>
+    <td>返回包含重要文件統計信息的fs.stat 物件。</td>
+  </tr>
+  <tr>
+    <td>fs.rmdir(path, callback)</td>
+    <td>重命名現有目錄。</td>
+  </tr>
+  <tr>
+    <td>fs.mkdir(path[, mode], callback)</td>
+    <td>創建新目錄。</td>
+  </tr>
+  <tr>
+    <td>fs.readdir(path, callback)</td>
+    <td>讀取指定目錄的內容。</td>
+  </tr>
+   <tr>
+    <td>fs.utimes(path, atime, mtime, callback)</td>
+    <td>更改文件的時間標記。</td>
+  </tr>
+   <tr>
+    <td>fs.exists(path, callback)</td>
+    <td>確定指定的文件是否存在。</td>
+  </tr>
+   <tr>
+    <td>fs.access(path[, mode], callback)</td>
+    <td>測試指定文件的用戶權限。</td>
+  </tr>
+   <tr>
+    <td>fs.appendFile(file, data[, options], callback)</td>
+    <td>將新內容附加到現有文件。</td>
+  </tr>
+</table>
+
 參考資料：
 https://nodejs.org/api/fs.html (官網) 
 https://ithelp.ithome.com.tw/articles/10185422 ( Node.js 檔案系統)
@@ -206,7 +247,7 @@ Callback function 是一個被作為參數帶入另一個函式中的「函式�
 ### **為了解決這個問題，於是誕生了Promise!!!**
 
 ### **Promise ⚡⚡**
-### <font color=#0044BB>Promise 是一個表示非同步運算的最終完成或失敗的物件</font>
+### Promise 是一個表示非同步運算的最終完成或失敗的物件
 Promise 是一個物件，代表著一個尚未完成，但最終會完成的一個動作，在一個「非同步處理」的流程中，它只是一個暫存的值（Placeholder）。
 Callback 以外的另一種方式來處理非同步事件，且可讀性與可維護性比 Callback 好很多。
 ![](https://i.imgur.com/GWS9Z4e.png)
