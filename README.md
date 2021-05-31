@@ -1,4 +1,4 @@
-# 5/29-5/30 node.js 筆記+心得
+# **5/29-5/30 node.js 筆記+心得**
 **📢總覽：**
 * 內容
 1. xhr XMLHttpRequest (實作-同步和非同步)
@@ -13,7 +13,7 @@
 ---
 
 
-## <font color=#008080>**xhr XMLHttpRequest**</font>
+## **xhr XMLHttpRequest**
 
 * 是最常見的 JavaScript HTTP Client，常見於 Web 應用、Debug、API 測試…。
 * 能透過它操作 HTTP 請求，進行網路作業，擷取資料的同時，卻不需進行頁面重載(page reload)，增加 Web 效能與體驗，這種**非同步**的 Web 應用架構，稱為 **AJAX**。
@@ -74,7 +74,7 @@ syncBtn.addEventListener("click",function(){
     });
 ```
 <br><br/>
-## <font color=#FF4500>**補充-跨來源資源共用（Cross-Origin Resource Sharing (CORS)）**</font>
+## **補充-跨來源資源共用（Cross-Origin Resource Sharing (CORS)）**
 針對不同源的請求而定的規範，透過 JavaScript 存取非同源資源時，server必須明確告知瀏覽器允許何種請求，只有server允許的請求能夠被瀏覽器實際發送，否則會失敗。
 
 這樣的設計是為了防範駭客的攻擊，在正常的情況下，駭客就不能夠任意用一個惡意的網站，去呼叫網路的服務。
@@ -85,10 +85,11 @@ syncBtn.addEventListener("click",function(){
 2. 相同的網域 (domain)
 3. 相同的通訊埠 (port)
 
-* *參考資料：https://medium.com/%E7%A8%8B%E5%BC%8F%E7%8C%BF%E5%90%83%E9%A6%99%E8%95%89/same-origin-policy-%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-%E4%B8%80%E5%88%87%E5%AE%89%E5%85%A8%E7%9A%84%E5%9F%BA%E7%A4%8E-36432565a226*
+* *參考資料：
+* https://medium.com/%E7%A8%8B%E5%BC%8F%E7%8C%BF%E5%90%83%E9%A6%99%E8%95%89/same-origin-policy-%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-%E4%B8%80%E5%88%87%E5%AE%89%E5%85%A8%E7%9A%84%E5%9F%BA%E7%A4%8E-36432565a226*
 <br><br/>
 
-## <font color=#008080>**asios基本使用**</font>
+## **asios基本使用**
 **安裝 GET / POST 基礎用法**
 ```javascript=
 npm install axios
@@ -110,7 +111,7 @@ axios.get('/users/123')
 });
 ```
 <br><br/>
-## <font color=#008080>**使用.gitignore忽略檔案**</font>
+## **使用.gitignore忽略檔案**
 
 忽略檔案：
 不應與其他開發人員共享的本地配置檔案
@@ -122,10 +123,11 @@ axios.get('/users/123')
 $ git add -f 檔案名稱 //忽略.gitignore的規則
 $ git clean -fX //清除忽略的檔案
 ```
-* *參考資料：w.tastones.com/zh-tw/stackoverflow/git/ignoring-files-and-folders/ignoring_files_and_directories_with_a_.gitignore_file/*
+* *參考資料：
+* w.tastones.com/zh-tw/stackoverflow/git/ignoring-files-and-folders/ignoring_files_and_directories_with_a_.gitignore_file/*
 <br><br/>
 
-## <font color=#008080>**安裝模組(module)與版本控制**</font>
+## **安裝模組(module)與版本控制**
 
 下載版本 -> npm install 
 全部版本檢查 -> npm view cowsay versions
@@ -153,9 +155,9 @@ $ git clean -fX //清除忽略的檔案
  2. 不用安裝命令，就能利用 npx 來執行
 ```
 ![](https://i.imgur.com/oeLX2Tk.jpg)
-#### <font color=#0044BB>( Σ(T□T) 恩...cowsay應該不太會用到的東西!重點是觀念！)</font>
+#### ( Σ(T□T) 恩...cowsay應該不太會用到的東西!重點是觀念！)
 <br><br/>
-## <font color=#008080>**模組(module) / 套件(package)的使用**</font>
+## **模組(module) / 套件(package)的使用**
 
 呼叫模組(module)
 require -> Node.js 和 ES6 都支援的引入
@@ -188,7 +190,7 @@ http://www.tastones.com/zh-tw/tutorial/nodejs/nodejs-modules-create-publish/ (No
 <br><br/>
 
 
-## <font color=#008080>**callback 與 Promise**</font>
+## **callback 與 Promise**
 ### **Callback Function**
 Callback function 是一個被作為參數帶入另一個函式中的「函式」，這個被作為參數帶入的函式將在「未來某個時間點」被呼叫和執行。
 
@@ -200,7 +202,7 @@ Callback function 是一個被作為參數帶入另一個函式中的「函式�
 1. 可讀性低：如果程式碼出錯，要回頭慢慢找錯誤的地方
 2. 可維護性低：如果要修改其中一組函式，牽一髮而動全身
 ```
-### <font color=orange>**為了解決這個問題，於是誕生了Promise!!!**</font>
+### **為了解決這個問題，於是誕生了Promise!!!**
 <br></br>
 ### **Promise ⚡⚡**
 ### <font color=#0044BB>Promise 是一個表示非同步運算的最終完成或失敗的物件</font>
@@ -296,7 +298,7 @@ Promise.race([promise(1), promise(2), promise(3, 3000)]).then(res => {
 });
 ```
 <br></br>
-## <font color=#008080>**Aysnc 與 Await**</font>
+## **Aysnc 與 Await**
 ### **Aysnc / Await**
 **語法糖：**
 * 是一種新的語法撰寫方式，來處理「非同步事件」。
@@ -338,12 +340,12 @@ https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7
 https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64
 https://wcc723.github.io/development/2020/02/16/all-new-promise/
 https://noob.tw/js-async/
-### **<font color=orange>Promise 你是神你是唯一的神話</font>**
+### **Promise 你是神你是唯一的神話**
 ![](https://i.imgur.com/a47aHnI.jpg)
-### **<font color=orange>而不會用的我是唯一的傻瓜</font>**
+### **而不會用的我是唯一的傻瓜**
 ![](https://i.imgur.com/OKrsBv7.png)
 <br></br>
-## <font color=#008080>**後記心得**</font>
+## **後記心得**
 
 <font color=#000 size=4>終於寫到後記，這次寫完筆記有種如釋重負的感覺，雖然第一次看到promise覺得頭很痛，甚至上課拼拼湊湊的爬蟲程式居然可以跑得動，當下超驚訝，同學還密我怎麼寫的，我也不知道啊！！這兩天再重新看過上課影片和相關文章後，好像有那麼一點點了解，但頭還是很痛，有種真得下去寫我可能還是寫不太出來的感覺，哭啊!!!看來只能努力再努力了!我的山很高~
 (´−｀) ﾝｰ </font>
