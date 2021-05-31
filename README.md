@@ -20,8 +20,7 @@
 * 能透過它操作 HTTP 請求，進行網路作業，擷取資料的同時，卻不需進行頁面重載( page reload )，增加 Web 效能與體驗，這種**非同步**的 Web 應用架構，稱為 **AJAX**。
 * XMLHttpRequest ( XHR ) 已無法應對現今複雜的 Web 環境，容易陷入波動拳( Callback Hell ) 。
 
-* 參考資料：
-<https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest>
+* 參考資料：<https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest>
 
 **實例：設定請求**
 ```javascript=
@@ -87,8 +86,7 @@ syncBtn.addEventListener("click",function(){
 2. 相同的網域 ( domain )
 3. 相同的通訊埠 ( port )
 
-* 參考資料：
-<https://medium.com/%E7%A8%8B%E5%BC%8F%E7%8C%BF%E5%90%83%E9%A6%99%E8%95%89/same-origin-policy-%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-%E4%B8%80%E5%88%87%E5%AE%89%E5%85%A8%E7%9A%84%E5%9F%BA%E7%A4%8E-36432565a226>
+* 參考資料：<https://medium.com/%E7%A8%8B%E5%BC%8F%E7%8C%BF%E5%90%83%E9%A6%99%E8%95%89/same-origin-policy-%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-%E4%B8%80%E5%88%87%E5%AE%89%E5%85%A8%E7%9A%84%E5%9F%BA%E7%A4%8E-36432565a226>
 <br><br/>
 
 ## **asios 基本使用**
@@ -125,8 +123,7 @@ axios.get('/users/123')
 $ git add -f 檔案名稱 //忽略.gitignore的規則
 $ git clean -fX //清除忽略的檔案
 ```
-* 參考資料：
-<w.tastones.com/zh-tw/stackoverflow/git/ignoring-files-and-folders/ignoring_files_and_directories_with_a_.gitignore_file/>
+* 參考資料：<http://www.tastones.com/zh-tw/stackoverflow/git/ignoring-files-and-folders/ignoring_files_and_directories_with_a_.gitignore_file/>
 <br><br/>
 
 ## **安裝模組( module )與版本控制**
@@ -234,12 +231,12 @@ fs.readFile(fileName [,options], callback)
   </tr>
 </table>
 
-* 參考資料：
-<https://nodejs.org/api/fs.html> ( 官網 ) 
+* 參考資料：<https://nodejs.org/api/fs.html> ( 官網 ) 
+
 <https://ithelp.ithome.com.tw/articles/10185422> ( Node.js 檔案系統 )
+
 <http://www.tastones.com/zh-tw/tutorial/nodejs/nodejs-modules-create-publish/> ( Node.js 建立、釋出、擴充套件和管理 )
 <br><br/>
-
 
 ## **callback 與 Promise**
 ### **Callback Function**
@@ -386,10 +383,12 @@ async function asyncFunc() {
 1. 可以直接將 await 獲得的回傳值存於一個變數中做後續使用，不是再呼叫 then() 方法串接。
 2. 程式碼看起來更像在處理「同步程式碼」，提升了易讀性與可維護性。
 ```
-* 參考資料：
-<https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f>
+* 參考資料：<https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f>
+
 <https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64>
+
 <https://wcc723.github.io/development/2020/02/16/all-new-promise/>
+
 <https://noob.tw/js-async/>
 
 ### **Promise 你是神你是唯一的神話**
