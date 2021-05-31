@@ -1,12 +1,12 @@
 # **5/29-5/30 node.js 筆記+心得**
-**📢總覽：**
+**📢 總覽：**
 * 內容
-1. xhr XMLHttpRequest (實作-同步和非同步)
+1. xhr XMLHttpRequest ( 實作-同步和非同步 )
 2. 補充：CORS-同源政策
 3. axios 用法
 4. 忽略檔案 .gitignore
-5. 安裝模組(module)與版本控制
-6. 模組(module) / 套件(package)的使用
+5. 安裝模組( module )與版本控制
+6. 模組( module ) / 套件( package )的使用
 7. callback 與 Promise
 8. Aysnc 與 Await
 9. 後記心得
@@ -17,11 +17,11 @@
 ## **xhr XMLHttpRequest**
 
 * 是最常見的 JavaScript HTTP Client，常見於 Web 應用、Debug、API 測試…。
-* 能透過它操作 HTTP 請求，進行網路作業，擷取資料的同時，卻不需進行頁面重載(page reload)，增加 Web 效能與體驗，這種**非同步**的 Web 應用架構，稱為 **AJAX**。
-* XMLHttpRequest (XHR) 已無法應對現今複雜的 Web 環境，容易陷入波動拳(Callback Hell) 。
+* 能透過它操作 HTTP 請求，進行網路作業，擷取資料的同時，卻不需進行頁面重載( page reload )，增加 Web 效能與體驗，這種**非同步**的 Web 應用架構，稱為 **AJAX**。
+* XMLHttpRequest ( XHR ) 已無法應對現今複雜的 Web 環境，容易陷入波動拳( Callback Hell ) 。
 
 * 參考資料：
-https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest*
+<https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest>
 
 **實例：設定請求**
 ```javascript=
@@ -50,8 +50,8 @@ https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpReq
   </script>
 </html>
 ```
-* HTTP 請求方式(method):GET、POST...
-* 建立請求取得資料的方式可以為非同步(asynchronously) 或 同步(synchronously)兩種之一，async參數為 true 或是未指定設定為非同步，相反為false則會被設定為同步。
+* HTTP 請求方式( method ):GET、POST...
+* 建立請求取得資料的方式可以為非同步( asynchronously ) 或 同步( synchronously )兩種之一，async 參數為 true 或是未指定設定為非同步，相反為false則會被設定為同步。
  
 **非同步請求**
 ```javascript=
@@ -81,29 +81,29 @@ syncBtn.addEventListener("click",function(){
 
 這樣的設計是為了防範駭客的攻擊，在正常的情況下，駭客就不能夠任意用一個惡意的網站，去呼叫網路的服務。
 
-**同源政策 (Same-Origin Policy)**
+**同源政策 ( Same-Origin Policy )**
 需滿足下面幾點：
-1. 相同的通訊協定 (protocol)，即 http/https
-2. 相同的網域 (domain)
-3. 相同的通訊埠 (port)
+1. 相同的通訊協定 ( protocol )，即 http/https
+2. 相同的網域 ( domain )
+3. 相同的通訊埠 ( port )
 
 * 參考資料：
-https://medium.com/%E7%A8%8B%E5%BC%8F%E7%8C%BF%E5%90%83%E9%A6%99%E8%95%89/same-origin-policy-%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-%E4%B8%80%E5%88%87%E5%AE%89%E5%85%A8%E7%9A%84%E5%9F%BA%E7%A4%8E-36432565a226
+<https://medium.com/%E7%A8%8B%E5%BC%8F%E7%8C%BF%E5%90%83%E9%A6%99%E8%95%89/same-origin-policy-%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-%E4%B8%80%E5%88%87%E5%AE%89%E5%85%A8%E7%9A%84%E5%9F%BA%E7%A4%8E-36432565a226>
 <br><br/>
 
-## **asios基本使用**
+## **asios 基本使用**
 **安裝 GET / POST 基礎用法**
 ```javascript=
 npm install axios
 yarn add axios
 ```
-**asios組成結構**
+**asios 組成結構**
 ```javascript=
 axios.(config 物件)
 .then(function (response) {})
 .catch(function (error) {});
 ```
-**then時常用的回應參數**
+**then 時常用的回應參數**
 ```javascript=
 axios.get('/users/123')
 .then(function(response) {
@@ -113,7 +113,7 @@ axios.get('/users/123')
 });
 ```
 <br><br/>
-## **使用.gitignore忽略檔案**
+## **使用 .gitignore 忽略檔案**
 
 忽略檔案：
 不應與其他開發人員共享的本地配置檔案
@@ -126,19 +126,27 @@ $ git add -f 檔案名稱 //忽略.gitignore的規則
 $ git clean -fX //清除忽略的檔案
 ```
 * 參考資料：
-* w.tastones.com/zh-tw/stackoverflow/git/ignoring-files-and-folders/ignoring_files_and_directories_with_a_.gitignore_file/*
+<w.tastones.com/zh-tw/stackoverflow/git/ignoring-files-and-folders/ignoring_files_and_directories_with_a_.gitignore_file/>
 <br><br/>
 
-## **安裝模組(module)與版本控制**
+## **安裝模組( module )與版本控制**
 
 下載版本 -> npm install 
+
 全部版本檢查 -> npm view cowsay versions
+
 最新版本 -> npm view cowsay version
+
 特定版本 -> npm i cowsay@1.1.3
+
 更新到最新版 -> npm update
+
 降版 -> npm install cowsay@1.3.0
+
 使用 -> npx cowsay
+
 移除 -> npm uninstall cowsay
+
 安裝到全域 -> npm install -g cowsay
 
 
@@ -157,11 +165,11 @@ $ git clean -fX //清除忽略的檔案
  2. 不用安裝命令，就能利用 npx 來執行
 ```
 ![](https://i.imgur.com/oeLX2Tk.jpg)
-#### ( Σ(T□T) 恩...cowsay應該不太會用到的東西!重點是觀念！)
+#### ( Σ(T□T) 恩 ... cowsay應該不太會用到的東西！重點是觀念！)
 <br><br/>
-## **模組(module) / 套件(package)的使用**
+## **模組( module ) / 套件( package )的使用**
 
-呼叫模組(module)
+呼叫模組( module )
 require -> Node.js 和 ES6 都支援的引入
 ```
 var express=require('express');
@@ -227,9 +235,9 @@ fs.readFile(fileName [,options], callback)
 </table>
 
 * 參考資料：
-https://nodejs.org/api/fs.html (官網) 
-https://ithelp.ithome.com.tw/articles/10185422 ( Node.js 檔案系統)
-http://www.tastones.com/zh-tw/tutorial/nodejs/nodejs-modules-create-publish/ (Node.js 建立、釋出、擴充套件和管理)
+<https://nodejs.org/api/fs.html> ( 官網 ) 
+<https://ithelp.ithome.com.tw/articles/10185422> ( Node.js 檔案系統 )
+<http://www.tastones.com/zh-tw/tutorial/nodejs/nodejs-modules-create-publish/> ( Node.js 建立、釋出、擴充套件和管理 )
 <br><br/>
 
 
@@ -241,20 +249,20 @@ Callback function 是一個被作為參數帶入另一個函式中的「函式�
 
 ![](https://i.imgur.com/kwuaIL1.png)
 ```
-👎缺點：
+👎 缺點：
 1. 可讀性低：如果程式碼出錯，要回頭慢慢找錯誤的地方
 2. 可維護性低：如果要修改其中一組函式，牽一髮而動全身
 ```
-### **為了解決這個問題，於是誕生了Promise!!!**
+### **為了解決這個問題，於是誕生了 Promise!!!**
 
 ### **Promise ⚡⚡**
 ### Promise 是一個表示非同步運算的最終完成或失敗的物件
-Promise 是一個物件，代表著一個尚未完成，但最終會完成的一個動作，在一個「非同步處理」的流程中，它只是一個暫存的值（Placeholder）。
+Promise 是一個物件，代表著一個尚未完成，但最終會完成的一個動作，在一個「非同步處理」的流程中，它只是一個暫存的值（ Placeholder ）。
 Callback 以外的另一種方式來處理非同步事件，且可讀性與可維護性比 Callback 好很多。
 ![](https://i.imgur.com/GWS9Z4e.png)
 ### ``Promise → pending → ( resolve or reject )``
 * pending：事件已經運行中，尚未取得結果。
-* resolved：事件已經執行完畢且成功操作，回傳 resolve 的結果（該承諾已經被實現 fulfilled）。
+* resolved：事件已經執行完畢且成功操作，回傳 resolve 的結果（ 該承諾已經被實現 fulfilled ）。
 * rejected：事件已經執行完畢但操作失敗，回傳 rejected 的結果。
 
 **語法：**
@@ -298,7 +306,7 @@ getData
 ```
 
 ### **Promise Chain (串連 then)**
-* Promise解決callback hell 用then()串接，then() 方法回傳的是一個「新的 promise」，以此往下互相串接
+* Promise 解決 callback hell 用 then() 串接， then() 方法回傳的是一個「新的 promise」，以此往下互相串接
 ```javascript=
   // Promise chain
   // 使用 then 方法，並將成功訊息印出來
@@ -326,7 +334,7 @@ getData
       console.log("我是 Finally");
     });
 ```
-### **Promise進階**
+### **Promise 進階**
 * `all`-> 多個 Promise 行為同時執行，全部完成後統一回傳，以陣列的形式傳入多個 promise 函式，在全部執行完成後回傳陣列結果，陣列結果順序與一開始傳入的一致。
 ```javascript=
 Promise.all([promise(1), promise(2), promise(3, 3000)])
@@ -374,15 +382,15 @@ async function asyncFunc() {
 }
 ```
 ```
-👍優點：
+👍 優點：
 1. 可以直接將 await 獲得的回傳值存於一個變數中做後續使用，不是再呼叫 then() 方法串接。
 2. 程式碼看起來更像在處理「同步程式碼」，提升了易讀性與可維護性。
 ```
 * 參考資料：
-https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f
-https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64
-https://wcc723.github.io/development/2020/02/16/all-new-promise/
-https://noob.tw/js-async/
+<https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f>
+<https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64>
+<https://wcc723.github.io/development/2020/02/16/all-new-promise/>
+<https://noob.tw/js-async/>
 
 ### **Promise 你是神你是唯一的神話**
 ![](https://i.imgur.com/a47aHnI.jpg)
