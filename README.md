@@ -231,7 +231,7 @@ fs.readFile(fileName [,options], callback)
   </tr>
 </table>
 
-* 參考資料：<https://nodejs.org/api/fs.html> ( 官網 ) 
+參考資料：<https://nodejs.org/api/fs.html> ( 官網 ) 
 
 <https://ithelp.ithome.com.tw/articles/10185422> ( Node.js 檔案系統 )
 
@@ -383,7 +383,7 @@ async function asyncFunc() {
 1. 可以直接將 await 獲得的回傳值存於一個變數中做後續使用，不是再呼叫 then() 方法串接。
 2. 程式碼看起來更像在處理「同步程式碼」，提升了易讀性與可維護性。
 ```
-* 參考資料：<https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f>
+參考資料：<https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f>
 
 <https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64>
 
