@@ -9,7 +9,7 @@
 6. 模組(module) / 套件(package)的使用
 7. callback 與 Promise
 8. Aysnc 與 Await
-* 後記心得
+9. 後記心得
 ---
 
 
@@ -18,7 +18,8 @@
 * 是最常見的 JavaScript HTTP Client，常見於 Web 應用、Debug、API 測試…。
 * 能透過它操作 HTTP 請求，進行網路作業，擷取資料的同時，卻不需進行頁面重載(page reload)，增加 Web 效能與體驗，這種**非同步**的 Web 應用架構，稱為 **AJAX**。
 * XMLHttpRequest (XHR) 已無法應對現今複雜的 Web 環境，容易陷入波動拳(Callback Hell) 。
-* *參考資料：https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest*
+
+* 參考資料：https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest*
 <br><br/>
 
 **實例：設定請求**
@@ -203,7 +204,7 @@ Callback function 是一個被作為參數帶入另一個函式中的「函式�
 2. 可維護性低：如果要修改其中一組函式，牽一髮而動全身
 ```
 ### **為了解決這個問題，於是誕生了Promise!!!**
-<br></br>
+
 ### **Promise ⚡⚡**
 ### <font color=#0044BB>Promise 是一個表示非同步運算的最終完成或失敗的物件</font>
 Promise 是一個物件，代表著一個尚未完成，但最終會完成的一個動作，在一個「非同步處理」的流程中，它只是一個暫存的值（Placeholder）。
@@ -335,8 +336,7 @@ async function asyncFunc() {
 1. 可以直接將 await 獲得的回傳值存於一個變數中做後續使用，不是再呼叫 then() 方法串接。
 2. 程式碼看起來更像在處理「同步程式碼」，提升了易讀性與可維護性。
 ```
-參考資料：
-https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f
+參考資料：https://realdennis.medium.com/callback-hell-%E8%88%87-promise-%E4%B8%80%E8%B5%B7%E4%BE%86%E6%8A%8A-settimeout-%E5%B0%81%E8%A3%9D%E6%88%90-promise-%E5%90%A7-e542ef84967f
 https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64
 https://wcc723.github.io/development/2020/02/16/all-new-promise/
 https://noob.tw/js-async/
@@ -344,8 +344,8 @@ https://noob.tw/js-async/
 ![](https://i.imgur.com/a47aHnI.jpg)
 ### **而不會用的我是唯一的傻瓜**
 ![](https://i.imgur.com/OKrsBv7.png)
-<br></br>
+
 ## **後記心得**
 
-<font color=#000 size=4>終於寫到後記，這次寫完筆記有種如釋重負的感覺，雖然第一次看到promise覺得頭很痛，甚至上課拼拼湊湊的爬蟲程式居然可以跑得動，當下超驚訝，同學還密我怎麼寫的，我也不知道啊！！這兩天再重新看過上課影片和相關文章後，好像有那麼一點點了解，但頭還是很痛，有種真得下去寫我可能還是寫不太出來的感覺，哭啊!!!看來只能努力再努力了!我的山很高~
+終於寫到後記，這次寫完筆記有種如釋重負的感覺，雖然第一次看到promise覺得頭很痛，甚至上課拼拼湊湊的爬蟲程式居然可以跑得動，當下超驚訝，同學還密我怎麼寫的，我也不知道啊！！這兩天再重新看過上課影片和相關文章後，好像有那麼一點點了解，但頭還是很痛，有種真得下去寫我可能還是寫不太出來的感覺，哭啊!!!看來只能努力再努力了!我的山很高~
 (´−｀) ﾝｰ </font>
