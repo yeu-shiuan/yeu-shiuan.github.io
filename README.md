@@ -118,7 +118,7 @@ axios.get('/users/123')
 包含機密資訊的檔案，例如登入密碼，金鑰和憑據
 
 **其他指令：**
-`-f 參數是指強制刪除的意思`
+`-f 參數f是強制加入的意思`
 ```bash=
 $ git add -f 檔案名稱 //忽略.gitignore的規則
 $ git clean -fX //清除忽略的檔案
@@ -166,8 +166,7 @@ $ git clean -fX //清除忽略的檔案
 <br><br/>
 ## **模組( module ) / 套件( package )的使用**
 
-呼叫模組( module )
-require -> Node.js 和 ES6 都支援的引入
+require 載入模組
 ```
 var express=require('express');
 ```
@@ -393,6 +392,10 @@ async function asyncFunc() {
 
 ### **Promise 你是神你是唯一的神話**
 ![](https://i.imgur.com/a47aHnI.jpg)
+
+圖片來源：
+<https://realdennis.medium.com/javascript-%E5%85%A9%E7%A8%AE%E6%96%B9%E6%B3%95%E8%AE%93promise%E6%8C%89%E7%85%A7%E9%A0%86%E5%BA%8F%E5%9F%B7%E8%A1%8C-mergepromise-cc2d5903419>
+
 ### **而不會用的我是唯一的傻瓜**
 ![](https://i.imgur.com/OKrsBv7.png)
 
